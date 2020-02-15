@@ -1,4 +1,4 @@
-# A Pre-processing Python Library
+# A Python Library for Preprocessing
 
 This repo contains **a Python library** to perform preprocessing for a sentiment analysis task with a CNN + embedding model.
 
@@ -12,19 +12,20 @@ This repo contains **a Python library** to perform preprocessing for a sentiment
 <br>
 
 **Four Main Methods:**
-1. *clean_text*<br>
+1. ***clean_text***<br>
    Remove URLs and unnecessary tokens in a tweet
    
-2. *tokenize_text*<br>
+2. ***tokenize_text***<br>
    Convert a string into an array of tokens using *TweetTonkenizer* from nltk
    
-3. *replace_token_with_index*<br>
+3. ***replace_token_with_index***<br>
    Replace each token by its index in the twitter GloVe embedding dictionary
 
-4. *pad_sequence*<br>
+4. ***pad_sequence***<br>
    Pad a list of indices with 0 until a maximum length
 
-
+<br>
+<br>
 
 **Files**
 * `twitter.py`: code for library
