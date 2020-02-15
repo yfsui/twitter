@@ -1,7 +1,7 @@
 """
 test of twitter.py
 """
-import unittest  
+import unittest
 import twitter as TwitterClass
 
 class TestMyModule(unittest.TestCase):
@@ -33,18 +33,20 @@ class TestMyModule(unittest.TestCase):
         """
         test of replace_token_with_index
         """
+        self.twitter.final_text = self.twitter.clean_text()
         self.twitter.tokens = self.twitter.tokenize_text()
         result = self.twitter.replace_token_with_index()
-        expected_result = [24477, 338, 40136, 32649, 2289, 71, 3931]
+        expected_result = [25389, 425, 41559, 33797, 2494, 111, 4219]
         self.assertEqual(result, expected_result)
 
     def test_pad_sequence(self):
         """
         test of pad_sequence
         """
+        self.twitter.final_text = self.twitter.clean_text()
         self.twitter.tokens = self.twitter.tokenize_text()
         self.twitter.indexes = self.twitter.replace_token_with_index()
         result = self.twitter.pad_sequence()
-        expected_result = [24477, 338, 40136, 32649, 2289, 71, 3931, 0, 0, 0]
+        expected_result = [25389, 425, 41559, 33797, 2494, 111, 4219, 0, 0, 0]
         self.assertEqual(result, expected_result)
         
