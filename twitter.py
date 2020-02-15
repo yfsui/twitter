@@ -50,14 +50,12 @@ class Twitter:
         # load embedding dictionary
         if self.tokens:
             emb_dict = {}
-            glove = open('glove.twitter.27B.25d.txt')
+            glove = open('glove.twitter.27B.25d.index.txt')
             i = 1
             for line in glove:
-                values = line.split()
-                word = values[0]
-                if word.isalpha(): # only load english words
-                    emb_dict[word] = i
-                    i += 1
+                word = line[:-1] # remove \n at the end of word
+                emb_dict[word] = i
+                i += 1
                 if self.max_length_dictionary and i > self.max_length_dictionary:
                     break
             glove.close()
@@ -80,6 +78,6 @@ class Twitter:
                 while len(self.indexes) < self.max_length_tweet:
                     self.indexes.append(0)
                 if len(self.indexes) > self.max_length_tweet:
-                    self.indexes = self.indexes[:15]
+                    self.indexes = self.indexes[:self.max_length_tweet]
             return self.indexes
         return "Please replace token with index first"
