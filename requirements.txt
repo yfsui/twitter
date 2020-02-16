@@ -1,0 +1,5 @@
+Python==3.7.3
+pytest==5.0.1
+pylint==2.3.1
+pytest-cov==2.8.1
+
