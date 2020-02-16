@@ -8,6 +8,6 @@ install:
 before_script:
   - pip install nltk
 script:
-  - pylint twitter.py
-  - pylint twitter_test.py
+  - pylint ./preprocessor/twitter.py
+  - pylint ./preprocessor/twitter_test.py
   - pytest --cov=preprocessor
