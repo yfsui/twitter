@@ -4,4 +4,7 @@ python:
 install:
   - pip install nltk
 script:
-  - python twitter_test.py
+  - pytest twitter_test.py
+  - pytest --cov
+  - pylint twitter.py
+  - pylint twitter_test.py
