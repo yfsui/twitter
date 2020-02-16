@@ -50,7 +50,7 @@ class Twitter:
         # load embedding dictionary
         if self.tokens:
             emb_dict = {}
-            glove = open('glove.twitter.27B.25d.index.txt')
+            glove = open('./preprocessor/glove.twitter.27B.25d.index.txt')
             i = 1
             for line in glove:
                 word = line[:-1] # remove \n at the end of word
