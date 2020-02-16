@@ -4,7 +4,7 @@ pre-processing of tweets
 import re
 from nltk.tokenize import TweetTokenizer
 
-class Twitter:
+class Preprocessor:
     """
     change a string of raw text into an array of int
     """
