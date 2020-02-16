@@ -28,8 +28,8 @@ This repo contains **a Python library** to perform preprocessing for a sentiment
 <br>
 
 **Files**
-* `twitter.py`: code for library
-* `twitter_test.py`: code for unit testing
+* `preprocessor.py`: code for library
+* `preprocessor_test.py`: code for unit testing
 * `glove.twitter.27B.25d.index`: twitter GloVe embedding dictionary from https://github.com/stanfordnlp/GloVe
 * `.travis.yml`: for Travis CI
 
